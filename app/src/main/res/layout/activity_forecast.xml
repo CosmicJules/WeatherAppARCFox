@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/gradient_drawable"
+    tools:context=".Forecast">
+
+
+    <ProgressBar
+        android:id="@+id/idloading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <ScrollView
+        android:id="@+id/ActivityContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/RelPar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/cityImage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/belfast"
+
+                />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:padding="20dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="20"
+                android:text="BELFAST, UK"
+
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/additionaldays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityImage"
+
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#40FFFFFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/day2date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day2"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/day2wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day2wind"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="5dp">
+
+                        </Space>
+
+                        <TextView
+                            android:id="@+id/day2temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Placeholder"
+                            android:textColor="@color/white"
+                            android:textSize="17sp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"></Space>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#40FFFFFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/day3date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day3"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/day3wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day3wind"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="5dp">
+
+                        </Space>
+
+                        <TextView
+                            android:id="@+id/day3temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Placeholder"
+                            android:textColor="@color/white"
+                            android:textSize="17sp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"></Space>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"></Space>
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"></Space>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#40FFFFFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/day4date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day4"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/day4wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day4wind"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="5dp">
+
+                        </Space>
+
+                        <TextView
+                            android:id="@+id/day4temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Placeholder"
+                            android:textColor="@color/white"
+                            android:textSize="17sp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"></Space>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#40FFFFFF"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/day5date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day5"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/day5wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="day5wind"
+                            android:textColor="@color/white"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="5dp">
+
+                        </Space>
+
+                        <TextView
+                            android:id="@+id/day5temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Placeholder"
+                            android:textColor="@color/white"
+                            android:textSize="17sp">
+
+                        </TextView>
+                    </LinearLayout>
+
+
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"></Space>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"></Space>
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"></Space>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"></Space>
+
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"></Space>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"></Space>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <Button
+
+        android:id="@+id/toCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:text="Current Weather">
+
+    </Button>
+
+</RelativeLayout>
