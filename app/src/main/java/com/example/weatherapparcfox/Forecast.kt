@@ -42,7 +42,7 @@ class Forecast : AppCompatActivity() {
 
 
     inner class weatherDetails() : AsyncTask<String, Void, String>() {
-        //checkDate Global var is used later to populate each cell
+        //checkDate Global var is used later to populate each cell that is not todays date or a pre- entered date
 
         val sdf = SimpleDateFormat("yyyy-MM-dd")
         val currentDatevalidateFormat = sdf.format(Date())
